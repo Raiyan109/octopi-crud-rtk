@@ -4,6 +4,7 @@ import Login from "../pages/Login";
 import SignUp from "../pages/SignUp";
 import User from "../pages/users/User";
 import CreateUser from "../pages/users/CreateUser";
+import ManageUser from "../pages/users/ManageUser";
 
 
 const routes = createBrowserRouter([
@@ -27,6 +28,10 @@ const routes = createBrowserRouter([
     {
         path: "/create-user",
         element: <CreateUser />
+    },
+    {
+        path: "/manage-user",
+        element: <ManageUser />
     },
 
 ])
