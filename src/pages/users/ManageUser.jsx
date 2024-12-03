@@ -1,17 +1,12 @@
 /* eslint-disable react/prop-types */
 
-import { useState } from "react"
 import { useDeleteUserMutation } from "../../redux/features/user/userApi"
 import { Link } from "react-router-dom"
 
 
 const ManageUser = ({ user }) => {
     const [deleteUser] = useDeleteUserMutation()
-    const [userId, setUserId] = useState('')
 
-    const handleUserId = (id) => {
-        setUserId(id)
-    }
 
     const handleDelete = (userId) => {
         deleteUser(userId)

@@ -3,7 +3,7 @@ import ManageUser from "./ManageUser"
 
 
 const ManageUsers = () => {
-    const { data, error, isLoading } = useGetAllUsersQuery()
+    const { data } = useGetAllUsersQuery()
     return (
         <div className="p-20">
             <table className="min-w-full divide-y divide-gray-200 ">

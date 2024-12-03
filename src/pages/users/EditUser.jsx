@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom"
 import { useGetSingleUserQuery, useUpdateUserMutation } from "../../redux/features/user/userApi"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 
 
 const EditUser = () => {
@@ -21,11 +21,11 @@ const EditUser = () => {
         session: "",
         cgpa: "",
     });
-    const [usersId, setUsersId] = useState('')
+
 
     const [updateUser] = useUpdateUserMutation()
     const { id } = useParams()
-    const { data: user, error, isLoading } = useGetSingleUserQuery(id)
+    const { data: user } = useGetSingleUserQuery(id)
 
 
     const userId = user?._id

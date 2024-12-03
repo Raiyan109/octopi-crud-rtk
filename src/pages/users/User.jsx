@@ -6,7 +6,7 @@ import Navbar from "../../components/Navbar";
 
 const User = () => {
     const { id } = useParams()
-    const { data: user, error, isLoading } = useGetSingleUserQuery(id)
+    const { data: user } = useGetSingleUserQuery(id)
     console.log(user);
 
     return (

@@ -3,7 +3,7 @@ import userImg from '../../assets/user.jpg'
 import { Link } from "react-router-dom";
 
 const Users = () => {
-    const { data, error, isLoading } = useGetAllUsersQuery()
+    const { data } = useGetAllUsersQuery()
     const colors = ['bg-[#e3dbfa]', 'bg-[#fbe2fa]', 'bg-[#ffe1cc]', 'bg-[#d4f6ed]'];
     return (
         <div>
