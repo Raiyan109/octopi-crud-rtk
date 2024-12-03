@@ -13,7 +13,7 @@ const Users = () => {
                     initial={{ y: 50, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ type: 'spring', stiffness: 100, damping: 20 }}
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-5">
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-9 mt-16">
                     {
                         data?.map((user, i) => (
                             <div key={user._id} className={`w-72 p-2 text-center bg-white rounded-lg border-[3px] border-[#c9c5c5] h-80`}>

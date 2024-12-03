@@ -5,7 +5,7 @@ import ManageUser from "./ManageUser"
 const ManageUsers = () => {
     const { data } = useGetAllUsersQuery()
     return (
-        <div className="p-20">
+        <div className="py-20 px-0 md:px-10">
             <table className="min-w-full divide-y divide-gray-200 ">
                 <thead>
                     <tr>

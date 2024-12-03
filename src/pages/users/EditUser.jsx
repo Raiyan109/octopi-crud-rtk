@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import { useGetSingleUserQuery, useUpdateUserMutation } from "../../redux/features/user/userApi"
 import { useState } from "react"
 
@@ -75,8 +75,9 @@ const EditUser = () => {
     };
 
     return (
-        <div className="">
-            <div className="flex items-center justify-center p-12">
+        <div className="p-5">
+            <Link to='/' className="px-4 py-2 font-medium text-white bg-[#6A64F1] rounded-md hover:bg-[#817bf5] focus:outline-none focus:shadow-outline-blue active:bg-[#6A64F1] transition duration-150 ease-in-out">Back</Link>
+            <div className="flex items-center justify-center py-12 px-1 md:px-12">
                 <div className="mx-auto w-full max-w-[550px] bg-white">
                     <form onSubmit={handleSubmit} className="p-10">
                         {/* Image */}
