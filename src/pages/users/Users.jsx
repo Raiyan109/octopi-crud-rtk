@@ -1,6 +1,7 @@
 import { useGetAllUsersQuery } from "../../redux/features/user/userApi";
 import userImg from '../../assets/user.jpg'
 import { Link } from "react-router-dom";
+import { motion } from "motion/react"
 
 const Users = () => {
     const { data } = useGetAllUsersQuery()
@@ -8,7 +9,11 @@ const Users = () => {
     return (
         <div>
             <div className="flex justify-center items-center">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-5">
+                <motion.div
+                    initial={{ y: 50, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ type: 'spring', stiffness: 100, damping: 20 }}
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-5">
                     {
                         data?.map((user, i) => (
                             <div key={user._id} className={`w-72 p-2 text-center bg-white rounded-lg border-[3px] border-[#c9c5c5] h-80`}>
@@ -51,7 +56,7 @@ const Users = () => {
                             </div>
                         ))
                     }
-                </div>
+                </motion.div>
             </div>
         </div>
     )
