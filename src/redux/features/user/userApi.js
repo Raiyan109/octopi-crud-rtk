@@ -28,7 +28,15 @@ export const userApi = baseApi.enhanceEndpoints({ addTagTypes: ['Users'] }).inje
             }),
             invalidatesTags: ['Users']
         }),
+        updateUser: builder.mutation({
+            query: ({ userId, ...user }) => ({
+                url: `/users/${userId}`,
+                method: 'PUT',
+                body: user
+            }),
+            invalidatesTags: ['Users']
+        }),
     })
 })
 
-export const { useGetAllUsersQuery, useGetSingleUserQuery, useCreateUserMutation, useDeleteUserMutation } = userApi
+export const { useGetAllUsersQuery, useGetSingleUserQuery, useCreateUserMutation, useDeleteUserMutation, useUpdateUserMutation } = userApi

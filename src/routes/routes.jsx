@@ -5,6 +5,7 @@ import SignUp from "../pages/SignUp";
 import User from "../pages/users/User";
 import CreateUser from "../pages/users/CreateUser";
 import ManageUsers from "../pages/users/ManageUsers";
+import EditUser from "../pages/users/EditUser";
 
 
 
@@ -21,10 +22,13 @@ const routes = createBrowserRouter([
         path: '/signUp',
         element: <SignUp />
     },
-
     {
         path: "/users/:id",
         element: <User />
+    },
+    {
+        path: "/edit-user/:id",
+        element: <EditUser />
     },
     {
         path: "/create-user",
