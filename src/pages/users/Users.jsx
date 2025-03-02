@@ -7,7 +7,7 @@ const Users = () => {
     const { data } = useGetAllUsersQuery()
     const colors = ['bg-[#e3dbfa]', 'bg-[#fbe2fa]', 'bg-[#ffe1cc]', 'bg-[#d4f6ed]'];
     return (
-        <div>
+        <div data-scroll-section>
             <div className="flex justify-center items-center">
                 <motion.div
                     initial={{ y: 50, opacity: 0 }}
